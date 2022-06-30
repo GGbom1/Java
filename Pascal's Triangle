@@ -1,0 +1,41 @@
+package two;
+import java.util.*;
+public class StringArray {
+	String a[][];
+
+	public void init(int rows,int cols) 
+	{
+		a = new String[rows][cols];
+		Scanner A = new Scanner(System.in);
+		for(int i =0 ; i<a.length ; i++) 
+		{
+			System.out.println("第"+i+"行");
+			for(int j = 0 ; j< a[i].length ;j++) 
+			{
+				System.out.print("第"+j+"列字符串");
+				a[i][j]= A.next();
+			}
+			
+		}
+		
+	}
+	
+	public boolean search (String target) 
+	{
+	
+		for(int i =0 ; i<a.length ;i++) 
+		{
+			for(int j=0; j<a[i].length ; j++) 
+			{
+				if(a[i][j].equals(target)) 
+				{
+					return true;
+				}
+					
+			}
+		}
+		return false;
+		
+	
+		
+	}
